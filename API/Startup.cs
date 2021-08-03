@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using API.Extensions;
 using Application.Activities;
 using Application.Core;
 using MediatR;
@@ -33,7 +34,7 @@ namespace API
         {
 
             services.AddControllers();
-            
+            services.AddApplicationServices(_config);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
