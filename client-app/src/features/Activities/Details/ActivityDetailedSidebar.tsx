@@ -25,7 +25,7 @@ export default observer(function ActivityDetailedSidebar ({activity: {attendees,
             <Segment attached>
                 <List relaxed divided>
                     {attendees.map(attendee => (
-                        <Item style={{ position: 'relative' }} key={attendee.username}>
+                        <Item style={{ position: 'relative' }} key={`${Math.floor(Math.random()*1000)}${attendee.username}`}>
                             {attendee.username === host?.username && 
                                 <Label
                                     style={{ position: 'absolute' }}
